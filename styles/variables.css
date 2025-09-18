@@ -2,3 +2,33 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /* Цвета темной темы (основная) */
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --section-cover-title: #FF0070;
+  --title-color: #db00ff;
+  --card-bg-color: #ff007066;
+  --shadow-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+
+  /* Шрифты */
+  --main-font: "IBM Plex Mono", monospace;
+
+  /* Размеры */
+  --main-inline-padding: 10px;
+  --main-section-padding: 50px;
+  --main-font-size: 18px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --title-line-height: 83%;
+  --main-line-height: 23.4px;
+  --section-why-padding: 40px;
+  --article-title-padding: 20px 10px;
+  --article-margin-block: 20px;
+
+  /* Фоновое изображение темной темы */
+  --bg-image: url(../images/cover-image-dark.png);
+}
