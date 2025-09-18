@@ -227,9 +227,6 @@
     margin-inline-start: 20px;
   }
 
-  .title_chose {
-  }
-
   .header__title {
     margin-block-start: 20px;
     padding: 0;
@@ -261,9 +258,6 @@
 
   .article {
     grid-column: 2;
-  }
-
-  .article-title {
   }
 
   .article-text {
