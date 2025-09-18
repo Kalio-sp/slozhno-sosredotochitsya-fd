@@ -2,6 +2,7 @@
   background-color: var(--bg-color, #000028);
   padding-inline: var(--main-inline-padding, 10px);
   font-family: var(--main-font, "IBM Plex mono");
+  background-attachment: fixed;
 }
 
 .header {
@@ -132,9 +133,6 @@
   font-weight: var(--font-weight-bold, 700);
   line-height: var(--main-line-height, 23.4px);
   color: var(--factor-color, #000028);
-}
-
-.article-title {
   margin-block-end: 10px;
 }
 
@@ -364,6 +362,10 @@
   .header__theme-menu-list {
     flex-direction: row;
     justify-self: center;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    right: 481px;
   }
 
   .header__rec {
@@ -420,13 +422,6 @@
 
   .text-light {
     margin-block-end: 10px;
-  }
-
-  .header__theme-menu-list {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    right: 481px;
   }
 
   .gallery img {
