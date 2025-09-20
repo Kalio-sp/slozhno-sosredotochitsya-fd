@@ -1,1 +1,1 @@
-https://github.com/Kalio-sp/slozhno-sosredotochitsya-fd#
+https://github.com/Kalio-sp/slozhno-sosredotochitsya-fd
