@@ -71,7 +71,7 @@
   border: 1px solid var(--text-color, #353430);
 }
 
-.header__rec {
+:root.theme-light .header__rec {
   display: none;
 }
 
