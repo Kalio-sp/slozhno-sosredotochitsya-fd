@@ -1,45 +1,46 @@
 .page {
   background-color: var(--bg-color, #000028);
-  padding-inline: var(--main-inline-padding, 10px);
   font-family: var(--main-font, "IBM Plex mono");
   background-image: var(--bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .header {
   display: grid;
   grid-template-columns: auto;
-  min-block-size: 668px;
   block-size: 100vh;
   position: relative;
   margin-block-end: var(--section-why-padding, 40px);
+  padding-inline: var(--main-inline-padding, 10px);
 }
 
 .decorated-zone {
   position: relative;
 }
 
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  display: block;
-  block-size: 25px;
-  inline-size: 25px;
-  top: 10px;
-  right: 0;
-  border-block-start: 1px solid var(--accent-color, #ff0070);
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-}
-
+.decorated-zone::before,
 .decorated-zone::after {
   content: "";
   position: absolute;
   display: block;
   block-size: 25px;
   inline-size: 25px;
+  margin-inline: var(--main-inline-padding, 10px);
+}
+
+.header.decorated-zone::before {
+  top: 10px;
+  right: 0;
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.header.decorated-zone::after {
   bottom: 10px;
   left: 0;
   border-block-end: 1px solid var(--accent-color, #ff0070);
@@ -55,6 +56,7 @@
   font-size: var(--main-font-size, 18px);
   font-weight: var(--font-weight-regular, 400);
   line-height: 25px;
+  margin-inline: var(--main-inline-padding, 10px);
 }
 
 .header__rec::after {
@@ -79,15 +81,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-block-start: 15px;
+  margin-block-start: 40px;
 }
 
 .header__theme-menu-item {
   color: var(--section-title-color, #ff0070);
-}
-
-.header__theme-menu-item:nth-child(3) {
-  margin-block-start: 5px;
 }
 
 .header__theme-menu-button {
@@ -96,7 +94,8 @@
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-font-size, 18px);
   font-weight: var(--font-weight-regular, 400);
-  padding: 4px 13px;
+  padding: 2px 13px 4px;
+  border: 1px solid transparent;
 }
 
 .header__theme-menu-button_active {
@@ -111,7 +110,6 @@
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   padding-block-end: 20px;
-  margin-block-start: -50px;
 }
 
 .header__text {
@@ -127,7 +125,7 @@
 }
 
 .content {
-  background-color: var(--bg-color, #000028);
+  padding-inline: var(--main-inline-padding, 10px);
 }
 
 .content__section-title {
@@ -183,11 +181,9 @@
 }
 
 .footer {
-  background-color: var(--bg-color, #000028);
   display: grid;
   grid-template-columns: 1fr;
   margin-block-start: 40px;
-  min-block-size: 668px;
   block-size: 100vh;
 }
 
@@ -200,6 +196,24 @@
   color: var(--title-color, #db00ff);
   text-shadow: 2px 2px var(--accent-color, #ff0070);
   margin-block-end: 50px;
+}
+
+.footer.decorated-zone {
+  position: relative;
+}
+
+.footer.decorated-zone::before {
+  top: -14px;
+  right: 0;
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.footer.decorated-zone::after {
+  bottom: 35px;
+  left: 0;
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
 }
 
 /* СОСТОЯНИЯ */
@@ -224,13 +238,9 @@
 /* МЕДИАЗАПРОСЫ */
 
 @media (width >= 768px) {
-  .header {
-    block-size: 1024px;
-  }
-
   .decorated-zone::after {
     margin-block-end: 20px;
-    margin-inline-start: 20px;
+    margin-inline-start: 30px;
   }
 
   .header__title {
@@ -309,10 +319,6 @@
     margin-inline-start: 20px;
   }
 
-  .title_chose {
-    block-size: 23px;
-  }
-
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -363,7 +369,7 @@
 
 @media (width >= 1024px) {
   .header {
-    block-size: 768px;
+    block-size: 100vh;
   }
 
   .header__title {
@@ -466,6 +472,7 @@
 
   .footer {
     margin-block-start: 80px;
+    max-height: 768px;
   }
 
   .footer__title {

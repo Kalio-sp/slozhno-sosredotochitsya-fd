@@ -51,6 +51,19 @@
     font-size: inherit;
     line-height: inherit;
   }
+
+  .header__theme-menu-list
+    .header__theme-menu-item
+    .header__theme-menu-button:hover {
+    border: 1px solid var(--section-cover-title, #353430);
+  }
+}
+
+:root.theme-light
+  .header__theme-menu-list
+  .header__theme-menu-item
+  .header__theme-menu-button:hover {
+  border: 1px solid var(--section-cover-title, #353430);
 }
 
 :root.theme-light .decorated-zone::before {
