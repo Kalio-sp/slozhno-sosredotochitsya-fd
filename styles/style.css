@@ -95,7 +95,6 @@
   line-height: var(--main-font-size, 18px);
   font-weight: var(--font-weight-regular, 400);
   padding: 2px 13px 4px;
-  border: 1px solid transparent;
 }
 
 .header__theme-menu-button_active {
