@@ -18,7 +18,8 @@
   --main-font: "IBM Plex Mono", monospace;
 
   /* Размеры */
-  --main-inline-padding: 10px;
+  --smaller-inline-padding: 10px;
+  --biggest-inline-padding: 20px;
   --main-section-padding: 50px;
   --main-font-size: 18px;
   --font-weight-regular: 400;

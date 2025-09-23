@@ -56,6 +56,12 @@
     .header__theme-menu-item
     .header__theme-menu-button:hover {
     border: 1px solid var(--section-cover-title, #353430);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+    border-bottom-color: #353430;
   }
 }
 
@@ -64,6 +70,7 @@
   .header__theme-menu-item
   .header__theme-menu-button:hover {
   border: 1px solid var(--section-cover-title, #353430);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 :root.theme-light .decorated-zone::before {
@@ -96,4 +103,9 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+:root.theme-light .header__theme-menu-button:focus {
+  outline: none;
+  border-bottom-color: #353430;
 }
