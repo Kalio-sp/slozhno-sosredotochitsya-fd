@@ -151,6 +151,11 @@
   margin-block-end: var(--article-margin-block, 20px);
 }
 
+.article-text,
+.article_text-cover {
+  width: 100%;
+}
+
 .title_chose {
   margin-block-end: var(--article-margin-block, 20px);
 }
@@ -172,6 +177,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  line-height: 0;
 }
 
 .gallery img {
@@ -225,7 +231,7 @@
 }
 
 .article-text .accent-decor:hover {
-  text-decoration-line: underline;
+  border-bottom: 2px solid #f1b2ce;
   text-decoration-color: currentColor;
 }
 
@@ -255,8 +261,6 @@
   .header.decorated-zone::before {
     top: 20px;
     right: 10px;
-    border-block-start: 1px solid var(--accent-color, #ff0070);
-    border-inline-end: 1px solid var(--accent-color, #ff0070);
   }
 
   .header.decorated-zone::after {
@@ -303,7 +307,6 @@
   }
 
   .article_text-cover {
-    inline-size: 100%;
     max-width: 728px;
   }
 
@@ -380,11 +383,10 @@
   }
 
   .footer {
-    margin-block-start: 90px;
+    margin-block-start: 60px;
   }
 
   .footer__title {
-    /*margin-inline-start: 20px;*/
     margin-block-end: 0px;
   }
 
@@ -427,17 +429,8 @@
   }
 
   .header.decorated-zone::before {
-    top: 20px;
-    right: 10px;
     border-block-start: 1px solid var(--accent-color, #ff0070);
     border-inline-end: 1px solid var(--accent-color, #ff0070);
-  }
-
-  .header.decorated-zone::after {
-    bottom: 0;
-    left: -10px;
-    border-block-end: 1px solid var(--accent-color, #ff0070);
-    border-inline-start: 1px solid var(--accent-color, #ff0070);
   }
 
   .header__text {
@@ -461,7 +454,6 @@
 
   .article_text-cover {
     max-width: 315px;
-    width: 100%;
   }
 
   .content__section-factor {
@@ -470,9 +462,7 @@
   }
 
   .content__section-why {
-    display: flex;
     flex-direction: row;
-    margin-block-start: 59px;
   }
 
   .articles {
@@ -481,6 +471,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .articles .article-title {
+    max-width: 315px;
+  }
+
   .article {
     flex: 1 1 calc(33.333% - 20px);
     box-sizing: border-box;
@@ -498,23 +493,8 @@
     margin-block-end: 10px;
   }
 
-  .gallery img {
-    display: block;
-    object-fit: cover;
-  }
-
   .decorated-zone {
     min-height: 768px;
-  }
-
-  .footer.decorated-zone::before {
-    right: 10px;
-    border-block-start: 1px solid var(--accent-color, #ff0070);
-    border-inline-end: 1px solid var(--accent-color, #ff0070);
-  }
-
-  .footer {
-    margin-block-start: 80px;
   }
 
   .footer__title {
