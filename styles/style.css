@@ -268,7 +268,6 @@
   .header.decorated-zone::after {
     bottom: 0px;
     left: -10px;
-    border-inline-start: 1px solid var(--accent-color, #ff0070);
   }
 
   .header__title {
@@ -343,7 +342,6 @@
   }
 
   .gallery {
-    display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     gap: 20px;
@@ -397,8 +395,6 @@
   .footer.decorated-zone::after {
     bottom: 0;
     left: -10px;
-    border-block-end: 1px solid var(--accent-color, #ff0070);
-    border-inline-start: 1px solid var(--accent-color, #ff0070);
   }
 }
 
@@ -421,9 +417,6 @@
   }
 
   .header__text {
-    display: grid;
-    align-self: center;
-    justify-self: end;
     max-width: 491px;
     margin-block-end: 88px;
   }

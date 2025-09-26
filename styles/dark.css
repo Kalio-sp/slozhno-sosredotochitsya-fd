@@ -80,7 +80,7 @@
 }
 
 :root.theme-dark .accent-decor:hover {
-  border-bottom: 2px solid #ff0070;
+  border-bottom: 2px solid  #f1b2ce;
 }
 
 :root.theme-dark .header__theme-menu-button_active {
